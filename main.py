@@ -11,16 +11,11 @@ from collections import Counter
 
 dictionaries = ['Defence.txt','Demography.txt','Economy.txt']
 
-if len(sys.argv) != 3:
-    print("python main.py <file-to-parse> <Dictionary>")
+if len(sys.argv) != 2:
+    print("python main.py <file-to-parse>")
     exit(1)
 
 filename = sys.argv[1]
-dictionary = sys.argv[2]
-'''if dictionary not in os.listdir():
-    print("Please correct dictionary name")
-    print("python main.py <file-to-parse> <Dictionary>")
-    exit(1)'''
 
 def parse(text,dictionary):
     w = len(dictionary)
@@ -43,17 +38,20 @@ def main():
         f = outfile.read()
         f = f.translate(string.maketrans(string.punctuation, ' '*len(string.punctuation)))
         words = word_tokenize(f.decode('utf-8'))
-    with open(dictionary,'r') as outfile:
-        d = outfile.read().decode('utf-8')
-        d = d.split('\n')
     wordsSelected = []
     for w in words:
         if w not in stopwords:
             wordsSelected.append(w)
-    is_significant = parse(wordsSelected, d)
+    score = 0
+    for dictionary in dictionaries:
+        with open(dictionary,'r') as outfile:
+            d = outfile.read().decode('utf-8')
+            d = d.split('\n')
+        is_significant = parse(wordsSelected, d)
+        if is_significant: score+=1
     #spread = FreqDist(wordsSelected)
     #print(spread.plot(50))
-    print("Significant" if is_significant else "Not Significant")
+    print("Score = %d"%(score))
     return
 
 
