@@ -19,9 +19,9 @@ def results(request):
     return render(request, 'results.html')
 
 
-'''
+#Only for static files testing. No use in balance of power application
 def test(request):
     result = finders.find('css/agency.css')
     if result==None:
         result = 'None'
-    return HttpResponse(result)'''
+    return HttpResponse(result)
