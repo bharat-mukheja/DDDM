@@ -108,40 +108,41 @@ rangeSlider();
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form action="{% url 'results'%}" method="post" name="sentMessage" id="contactForm" novalidate>
+                        {% csrf_token %}
                         <div class="row">
 						
                             <div class="col-md-4">
 								<h5 style="color:blue; width:100%;margin-bottom:50px">Select list of countries to consider</h5>
                               <div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Select All</label>
+									<label><input type="checkbox" name="country_list" value="">Select All</label>
 								</div>
 				    <div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">USA</label>
+									<label><input type="checkbox" name="country_list"  value="">USA</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">USSR</label>
+									<label><input type="checkbox" name="country_list"  value="">USSR</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Egypt</label>
+									<label><input type="checkbox" name="country_list"  value="">Egypt</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Iran</label>
+									<label><input type="checkbox" name="country_list"  value="">Iran</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Turkey</label>
+									<label><input type="checkbox" name="country_list"  value="">Turkey</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Iraq</label>
+									<label><input type="checkbox" name="country_list"  value="">Iraq</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Saudi Arabia</label>
+									<label><input type="checkbox" name="country_list"  value="">Saudi Arabia</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Yemen</label>
+									<label><input type="checkbox" name="country_list"  value="">Yemen</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Syria</label>
+									<label><input type="checkbox" name="country_list"  value="">Syria</label>
 								</div>
 								
 								
@@ -151,37 +152,37 @@ rangeSlider();
 							<div class="col-md-4">
 								<h5 style="color:blue; width:100%;margin-bottom:50px">.</h5>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">UAE</label>
+									<label><input type="checkbox" name="country_list"  value="">UAE</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Israel</label>
+									<label><input type="checkbox" name="country_list"  value="">Israel</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Jordan</label>
+									<label><input type="checkbox" name="country_list"  value="">Jordan</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Palestine</label>
+									<label><input type="checkbox" name="country_list" value="">Palestine</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Lebanon</label>
+									<label><input type="checkbox" name="country_list"  value="">Lebanon</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Oman</label>
+									<label><input type="checkbox" name="country_list"  value="">Oman</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Kuwait</label>
+									<label><input type="checkbox" name="country_list"  value="">Kuwait</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Qatar</label>
+									<label><input type="checkbox" name="country_list"  value="">Qatar</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" value="">Bahrain</label>
+									<label><input type="checkbox" name="country_list"  value="">Bahrain</label>
 								</div>
 							</div>
                             <div class="col-md-4 righthere">
-                                <h5 style="color:blue; width:100%; margin-bottom:50px">Select fators to consider</h5>
+                                <h5 style="color:blue; width:100%; margin-bottom:50px">Select factors to consider</h5>
                                 <div class="checkbox rightcheck">
-									<label><input type="checkbox" value="">Economy</label>
+									<label><input type="checkbox" name="_list"  value="">Economy</label>
 					<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
@@ -220,7 +221,7 @@ rangeSlider();
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" onclick="location.href='results.html';" class="btn btn-xl" style="margin-top:50px;">Evaluate</button>
+                                <button type="submit" onclick="location.href='{% url "results" %}'" class="btn btn-xl" style="margin-top:50px;">Evaluate</button>
                             </div>
                         </div>
                     </form>
