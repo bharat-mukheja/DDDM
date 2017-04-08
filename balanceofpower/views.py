@@ -16,11 +16,18 @@ def latest(request):
     return render(request, 'latest.html')
 
 def results(request):
+    test2(request)
     form = InfoForm(request.POST)
     if form.is_valid():
         pass  # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
     #Write information for displaying of results. All the required data is in the form.
     return render(request, 'results.html')
+
+
+#Testing html form objects
+def test2(request):
+    countries = request.POST.getlist('country_list')
+    return HttpResponse(countries)
 
 
 #Only for static files testing. No use in balance of power application

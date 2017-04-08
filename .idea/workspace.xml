@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da746e6-5be4-446a-8b59-833399239ecc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/balanceofpower/forms.py" afterPath="$PROJECT_DIR$/balanceofpower/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/balanceofpower/templates/formfill.html" afterPath="$PROJECT_DIR$/balanceofpower/templates/formfill.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/balanceofpower/templates/results.html" afterPath="$PROJECT_DIR$/balanceofpower/templates/results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/balanceofpower/views.py" afterPath="$PROJECT_DIR$/balanceofpower/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +21,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="formfill.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formfill.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/balanceofpower/templates/formfill.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
@@ -100,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/balanceofpower/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -139,13 +138,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/balanceofpower/templates/indexcopy.html" />
-        <option value="$PROJECT_DIR$/balanceofpower/views.py" />
         <option value="$PROJECT_DIR$/balanceofpower/urls.py" />
         <option value="$PROJECT_DIR$/balanceofpower/templates/index.html" />
         <option value="$PROJECT_DIR$/balanceofpower/templates/latest.html" />
         <option value="$PROJECT_DIR$/balanceofpower/templates/results.html" />
         <option value="$PROJECT_DIR$/balanceofpower/templates/formfill.html" />
         <option value="$PROJECT_DIR$/balanceofpower/forms.py" />
+        <option value="$PROJECT_DIR$/balanceofpower/views.py" />
       </list>
     </option>
   </component>
@@ -1002,16 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/balanceofpower/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/balanceofpower/templates/formfill.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1022,6 +1011,16 @@
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/balanceofpower/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
