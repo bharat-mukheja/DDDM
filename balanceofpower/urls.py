@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^formfill/$', views.formfill, name='formfill'),
     url(r'^results/$', views.results, name='results'),
     url(r'^test/$', views.test, name='test'),
+    url(r'^latest/$', views.latest, name='latest'),
 ]

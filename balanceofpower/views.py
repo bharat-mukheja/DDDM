@@ -11,6 +11,10 @@ def formfill(request):
     form = InfoForm()
     return render(request, 'formfill.html',{'form':form})
 
+def latest(request):
+    #Basic - Doesnt need to be altered
+    return render(request, 'latest.html')
+
 def results(request):
     form = InfoForm(request.POST)
     if form.is_valid():
