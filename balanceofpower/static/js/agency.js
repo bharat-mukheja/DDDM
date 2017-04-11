@@ -30,4 +30,13 @@
         }
     })
 
+    function formsubmit(){
+
+         alert("Submit button clicked!");
+   return true;
+}
+
+
 })(jQuery); // End of use strict
+
+
