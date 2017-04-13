@@ -14,11 +14,11 @@ import requests
 import re
 import csv
 j = 0
-ecof = open('data\\economy.csv', 'w', newline='')
-geof = open('data\\geography.csv', 'w', newline='')
-demf = open('data\\demographics.csv', 'w', newline='')
-socf = open('data\\society.csv', 'w', newline='')
-inff = open('data\\infrastructure.csv', 'w', newline='')
+ecof = open('data\\economy.csv', 'w')
+geof = open('data\\geography.csv', 'w')
+demf = open('data\\demographics.csv', 'w')
+socf = open('data\\society.csv', 'w')
+inff = open('data\\infrastructure.csv')
 ecow = csv.writer(ecof)
 geow = csv.writer(geof)
 demw = csv.writer(demf)
