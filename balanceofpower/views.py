@@ -12,7 +12,12 @@ def formfill(request):
     form = InfoForm()
     return render(request, 'formfill.html',{'form':form})
 
+def latest(request):
+    #Basic - Doesnt need to be altered
+    return render(request, 'latest.html')
+
 def results(request):
+    test2(request)
     form = InfoForm(request.POST)
     if form.is_valid():
         pass  # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
@@ -29,6 +34,12 @@ def input_output(selected_countries,selected_categories,weights):
 	truth_table=pd.concat(dataframes,axis=1,join='outer')
 	
 
+
+
+#Testing html form objects
+def test2(request):
+    countries = request.POST.getlist('country_list')
+    return HttpResponse(countries)
 
 
 #Only for static files testing. No use in balance of power application

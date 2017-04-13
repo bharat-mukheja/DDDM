@@ -51,13 +51,6 @@
 };
 
 rangeSlider();
-
-function formsubmit(){
-
-
-   return true;
-}
-
 </script>
 
     <!-- Navigation -->
@@ -115,96 +108,80 @@ function formsubmit(){
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="{% url 'results'%}" method="post" name="countryselect" id="contactForm" novalidate>
-                        {% csrf_token %}
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
 						
                             <div class="col-md-4">
 								<h5 style="color:blue; width:100%;margin-bottom:50px">Select list of countries to consider</h5>
                               <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list" value="all">Select All</label>
+									<label><input type="checkbox" value="">Select All</label>
 								</div>
 				    <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="af">Afghanistan</label>
+									<label><input type="checkbox" value="">USA</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="ba">Bahrain</label>
+									<label><input type="checkbox" value="">USSR</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="cy">Cyprus</label>
+									<label><input type="checkbox" value="">Egypt</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="eg">Egypt</label>
+									<label><input type="checkbox" value="">Iran</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="ir">Iran</label>
+									<label><input type="checkbox" value="">Turkey</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="iz">Iraq</label>
+									<label><input type="checkbox" value="">Iraq</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="is">Israel</label>
+									<label><input type="checkbox" value="">Saudi Arabia</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="jo">Jordon</label>
+									<label><input type="checkbox" value="">Yemen</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="ku">Kuwait</label>
+									<label><input type="checkbox" value="">Syria</label>
 								</div>
-
-
-
-
+								
+								
+								
+								
                             </div>
 							<div class="col-md-4">
 								<h5 style="color:blue; width:100%;margin-bottom:50px">.</h5>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="le">Lebanon</label>
+									<label><input type="checkbox" value="">UAE</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="li">Libya</label>
+									<label><input type="checkbox" value="">Israel</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="mu">Oman</label>
+									<label><input type="checkbox" value="">Jordan</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list" value="pk">Pakistan</label>
+									<label><input type="checkbox" value="">Palestine</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="qa">Qatar</label>
+									<label><input type="checkbox" value="">Lebanon</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="rs">Russia</label>
+									<label><input type="checkbox" value="">Oman</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="sa">Saudi Arabia</label>
+									<label><input type="checkbox" value="">Kuwait</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="su">Sudan</label>
+									<label><input type="checkbox" value="">Qatar</label>
 								</div>
 								<div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="sy">Syria</label>
+									<label><input type="checkbox" value="">Bahrain</label>
 								</div>
-
-                                <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="tu">Turkey</label>
-								</div>
-                                <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="ae">UAE</label>
-								</div>
-                                <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="us">United States</label>
-								</div>
-                                <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list"  value="ym">Yemen</label>
-								</div>
-
-
 							</div>
                             <div class="col-md-4 righthere">
-                                <h5 style="color:blue; width:100%; margin-bottom:50px">Select factors to consider</h5>
+                                <h5 style="color:blue; width:100%; margin-bottom:50px">Select fators to consider</h5>
                                 <div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list"  value="economy">Economy</label>
+									<label><input type="checkbox" value="">Economy</label>
 					<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
@@ -212,28 +189,28 @@ function formsubmit(){
 
 								</div>
 								<div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list" value="society">Society</label>
+									<label><input type="checkbox" value="">Military</label>
 										<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
 </div>
 								</div>
 								<div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list" value="geography">Geography</label>
+									<label><input type="checkbox" value="">Transnational issues</label>
 						<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
 </div>			
 				    </div>
 								<div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list" value="demographics">Demographics</label>
+									<label><input type="checkbox" value="">People</label>
 						<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
 </div>			
 				    </div>
 								<div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list" value="infrastructure">Infrastructure</label>
+									<label><input type="checkbox" value="">Energy</label>
 						<div class="range-slider">
   <input class="range-slider__range" type="range" value="5" min="0" max="5">
   <span class="range-slider__value"></span>
@@ -243,8 +220,7 @@ function formsubmit(){
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl" style="margin-top:50px;">Evaluate</button>
-                                <!--<input type="submit" value="submit" class="btn btn-xl" style="margin-top:50px;"/>-->
+                                <button type="submit" onclick="location.href='results.html';" class="btn btn-xl" style="margin-top:50px;">Evaluate</button>
                             </div>
                         </div>
                     </form>
