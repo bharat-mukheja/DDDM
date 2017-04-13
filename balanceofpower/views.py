@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from .forms import InfoForm
 import pandas as pd
+from .algo import input_output
 
 from django.contrib.staticfiles import finders
 # Create your views here.
@@ -21,18 +22,9 @@ def results(request):
     parameters = request.POST.getlist('parameter_list')
     # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
     #Write information for displaying of results. All the required data is in the form.
-    return render(request, 'results.html')
-
-def input_output(selected_countries,selected_categories,weights):
-	economy=pd.read_csv("data/economy.csv")
-	society=pd.read_csv("data/society.csv")
-	geography=pd.read_csv("data/geography.csv")
-	demographics=pd.read_csv("data/demographics.csv")
-	infrastructure=pd.read_csv("data/infrastructure.csv")
-	dataframes=[economy,society,geography,demographics,infrastructure]
-	truth_table=pd.concat(dataframes,axis=1,join='outer')
-	
-
+    execfile('balanceofpower\scraper.py')
+    df = input_output(countries,parameters,[1 for i in range(len(parameters))])
+    return render(request, 'results.html',table = df.to_html())
 
 
 #Testing html form objects
