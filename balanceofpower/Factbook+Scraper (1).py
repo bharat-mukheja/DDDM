@@ -1,29 +1,41 @@
 
 # coding: utf-8
 
-# In[5]:
+# In[12]:
 
 def clean(token):
     token = re.sub('[(,;%$)]', '', token)
     return token
 
-# In[55]:
+
+# In[14]:
 
 from bs4 import BeautifulSoup
 import requests
 import re
 import csv
 j = 0
-ecof = open('data\\economy.csv', 'wb')
-geof = open('data\\geography.csv', 'wb')
-demf = open('data\\demographics.csv', 'wb')
-socf = open('data\\society.csv', 'wb')
-inff = open('data\\infrastructure.csv','wb')
+ecof = open('C:\\Users\\Alex\\Desktop\\economy.csv', 'w', newline='')
+geof = open('C:\\Users\\Alex\\Desktop\\geography.csv', 'w', newline='')
+demf = open('C:\\Users\\Alex\\Desktop\\demographics.csv', 'w', newline='')
+socf = open('C:\\Users\\Alex\\Desktop\\society.csv', 'w', newline='')
+inff = open('C:\\Users\\Alex\\Desktop\\infrastructure.csv', 'w', newline='')
 ecow = csv.writer(ecof)
 geow = csv.writer(geof)
 demw = csv.writer(demf)
 socw = csv.writer(socf)
 infw = csv.writer(inff)
+ecow.writerow(['Country Code', 'Exports', 'Imports', 'GDP', 'GDP Per Capita',
+              'Oil Production', 'Refined Petroleum Production'])
+geow.writerow(['Country Code', 'Area', 'Water Area', 'Natural Resources',
+              'Natural Hazards', 'Agriculture'])
+demw.writerow(['Country Code', 'Population', 'Ethnic Groups', 'Dependency Ratio',
+              'Unemployment', 'Literacy', 'Poverty', 'Population Growth'])
+socw.writerow(['Country Code', 'Net Migration', 'Urban Population', 'Obesity', 
+               'Life Expectancy', 'Fertility', 'Internet', 'Infant Mortality'])
+infw.writerow(['Country Code', 'Military Expenditures', 'Industries',
+              'Health Expenditures', 'Education Expenditures',
+              'Industrial Growth', 'Electricity Production'])
 
 countries = ['af', 'ba', 'cy', 'eg', 'ir', 'iz', 'is', 'jo', 'ku', 'le', 'ly', 'mu', 
                 'pk', 'qa', 'rs', 'sa', 'su', 'sy', 'tu', 'ae', 'us', 'ym']
@@ -391,11 +403,6 @@ geof.close()
 demf.close()
 socf.close()
 inff.close()
-
-
-# In[ ]:
-
-
 
 
 # In[ ]:

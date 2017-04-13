@@ -1,23 +1,22 @@
-Country,d1,d3,d4,d5,d6,d7
-af,33332025,87,35,38.2,35.8,2.34
-ba,1378904,31.4,4.1,95.7,NA,2.33
-cy,1205575,41.6,11.8,99.1,NA,1.38
-eg,94666993,62.3,13.1,73.8,25.2,2.51
-ir,82801633,40.2,10.7,86.8,18.7,1.18
-iz,38146025,78.7,16,79.7,25,2.87
-is,8174527,64.1,5,97.8,22,1.53
-jo,8185384,64.8,14.8,95.4,14.2,0.83
-ku,2832776,32.1,3,96.3,NA,1.53
-le,6237738,47.3,NA,93.9,28.6,0.85
-ly,6541948,52.4,30,91,NA,1.8
-mu,3355262,30,15,91.1,NA,2.05
-pk,201995540,65.3,6.7,57.9,22.3,1.45
-qa,2258283,20.1,0.7,97.3,NA,2.64
-rs,142355415,43.1,8.2,99.7,11.2,-0.06
-sa,28160273,45.9,11.2,94.7,NA,1.46
-su,36729501,78,13.6,75.9,46.5,1.69
-sy,17185170,70,50,86.4,82.5,1.56
-tu,80274604,49.7,9.8,95,16.9,0.9
-ae,5927482,17.8,2.4,93.8,19.5,2.47
-us,323995528,50.9,4.7,0,15.1,0.81
-ym,27392779,75.6,27,70.1,54,2.37
+af,33332025,"[u'Pashtun', u' Tajik', u' Hazara', u' Uzbek', u' Turkmen', u' Nuristani', u' Pamiri', u' Arab', u' Gujar', u' Brahui', u' Qizilbash', u' Aimaq', u' Pashai', u"" Afghanistan's 2004 constitution recognizes 14 ethnic groups: Pashtun"", u' Tajik', u' Hazara', u' Uzbek', u' Baloch', u' Turkmen', u' Nuristani', u' Pamiri', u' Arab', u' Gujar', u' Brahui', u' Qizilbash', u' Aimaq']",87,35,38.2,35.8,2.34
+ba,1378904,"[u'Bahraini 46', u' Asian 45.5', u' African 1.6', u' European 1', u' North and South Americans']",31.4,4.1,95.7,NA,2.33
+cy,1205575,"[u'Greek 98.8', u' Armenian', u' Turkish-Cypriot']",41.6,11.8,99.1,NA,1.38
+eg,94666993,[u'Egyptian 99.6'],62.3,13.1,73.8,25.2,2.51
+ir,82801633,"[u'Persian', u' Azeri', u' Kurd', u' Lur', u' Baloch', u' Arab', u' Turkmen and Turkic tribes']",40.2,10.7,86.8,18.7,1.18
+iz,38146025,"[u'Arab 75-80', u' Kurdish 15-20', u' Turkoman', u' Assyrian']",78.7,16,79.7,25,2.87
+is,8174527,"[u'Jewish 74.8 of which Israel-born 75.6', u' Europe/America/Oceania-born 16.6', u' Africa-born 4.9', u' Asia-born 2.9']",64.1,5,97.8,22,1.53
+jo,8185384,"[u'Arab 98', u' Circassian 1', u' Armenian 1']",64.8,14.8,95.4,14.2,0.83
+ku,2832776,"[u'Kuwaiti 31.3', u' Asian 37.8', u' African 1.9', u' North American', u' South American']",32.1,3,96.3,NA,1.53
+le,6237738,"[u'Arab 95', u' Armenian 4']",47.3,NA,93.9,28.6,0.85
+ly,6541948,"[u'Berber and Arab 97', u' Maltese', u' Italians', u' Egyptians', u' Pakistanis', u' Turks', u' Indians']",52.4,30,91,NA,1.8
+mu,3355262,"[u'Arab', u' Baluchi', u' South Asian Indian', u' Pakistani', u' Sri Lankan', u' Bangladeshi', u' African']",30,15,91.1,NA,2.05
+pk,201995540,"[u'Punjabi 44.68', u' Pashtun Pathan 15.42', u' Sindhi 14.1', u' Sariaki 8.38', u' Muhajirs 7.57', u' Balochi 3.57']",65.3,6.7,57.9,22.3,1.45
+qa,2258283,"[u'Arab 40', u' Indian 18', u' Pakistani 18', u' Iranian 10']",20.1,0.7,97.3,NA,2.64
+rs,142355415,"[u'Russian 77.7', u' Tatar 3.7', u' Ukrainian 1.4', u' Bashkir 1.1', u' Chuvash 1', u' Chechen 1']",43.1,8.2,99.7,11.2,-0.06
+sa,28160273,"[u'Arab 90', u' Afro-Asian 10']",45.9,11.2,94.7,NA,1.46
+su,36729501,"[u'Sudanese Arab approximately 70', u' Fur', u' Beja', u' Nuba', u' Fallata']",78,13.6,75.9,46.5,1.69
+sy,17185170,"[u'Arab 90.3', u' Kurdish', u' Armenian']",70,50,86.4,82.5,1.56
+tu,80274604,"[u'Turkish 70-75', u' Kurdish 19']",49.7,9.8,95,16.9,0.9
+ae,5927482,"[u'Emirati 19', u' South Asian 50']",17.8,2.4,93.8,19.5,2.47
+us,323995528,"[u' Asian 4.43', u' Amerindian and Alaska native 0.97', u' Cuban', u' Puerto Rican', u' Dominican Republic', u' Spanish', u' Asian']",50.9,4.7,0,15.1,0.81
+ym,27392779,"[u' South Asians', u' Europeans']",75.6,27,70.1,54,2.37
