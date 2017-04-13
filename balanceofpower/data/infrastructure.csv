@@ -1,22 +1,23 @@
-af,0,"[u'small-scale production of bricks', u' textiles', u' soap', u' furniture', u' shoes', u' fertilizer', u' apparel', u' food products', u' non-alcoholic beverages', u' mineral water', u' cement', u' handwoven carpets', u' natural gas', u' coal', u' copper']",8.2,3.4,2.4,1
-ba,0,"[u'petroleum processing and refining', u' aluminum smelting', u' iron pelletization', u' fertilizers', u' Islamic and offshore banking', u' insurance', u' ship repairing', u' tourism']",5,2.6,1.6,26
-cy,0,"[u'tourism', u' food and beverage processing', u' cement and gypsum', u' ship repair and refurbishment', u' textiles', u' light chemicals', u' metal products', u' wood', u' paper', u' stone and clay products', u'Industries: foodstuffs', u' textiles', u' clothing', u' ship repair', u' clay', u' gypsum', u' copper', u' furniture']",7.4,604,1.5,4.1
-eg,0,"[u'textiles', u' food processing', u' tourism', u' chemicals', u' pharmaceuticals', u' hydrocarbons', u' construction', u' cement', u' metals', u' light manufactures']",5.6,3.8,0.6,162
-ir,0,"[u'petroleum', u' petrochemicals', u' gas', u' fertilizers', u' caustic soda', u' textiles', u' cement and other construction materials', u' food processing particularly sugar refining and vegetable oil production', u' ferrous and nonferrous metal fabrication', u' armaments']",6.9,2.9,4.5,258
-iz,0,"[u'petroleum', u' chemicals', u' textiles', u' leather', u' construction materials', u' food processing', u' fertilizer', u' metal fabrication/processing']",5.5,NA,7,64
-is,0,"[u'high-technology products including aviation', u' communications', u' computer-aided design and manufactures', u' medical electronics', u' fiber optics', u' wood and paper products', u' potash and phosphates', u' food', u' beverages', u' and tobacco', u' caustic soda', u' cement', u' construction', u' met', u'high-technology products including aviation', u' communications', u' computer-aided design and manufactures', u' medical electronics', u' fiber optics', u' wood and paper products', u' potash and phosphates', u' food', u' beverages', u' and tobacco', u' caustic soda', u' cement', u' construction', u' met']",7.8,5.9,2.6,57
-jo,0,"[u'tourism', u' information technology', u' clothing', u' fertilizers', u' potash', u' phosphate mining', u' pharmaceuticals', u' petroleum refining', u' cement', u' inorganic chemicals', u' light manufacturing']",7.5,NA,1.8,17
-ku,0,"[u'petroleum', u' petrochemicals', u' cement', u' shipbuilding and repair', u' water desalination', u' food processing', u' construction materials']",3,0,1.6,61
-le,0,"[u'banking', u' tourism', u' food processing', u' wine', u' jewelry', u' cement', u' textiles', u' mineral and chemical products', u' wood and furniture products', u' oil refining', u' metal fabricating']",6.4,2.6,1.4,18
-ly,0,"[u'petroleum', u' petrochemicals', u' aluminum', u' iron and steel', u' food processing', u' textiles', u' handicrafts', u' cement']",5,NA,-6.7,35
-mu,0,"[u'crude oil production and refining', u' natural and liquefied natural gas LNG production', u' construction', u' cement', u' copper', u' steel', u' chemicals', u' optic fiber']",3.6,5,1.5,28
-pk,0,"[u'textiles and apparel', u' food processing', u' pharmaceuticals', u' construction materials', u' paper products', u' fertilizer', u' shrimp']",2.6,2.7,6.8,100
-qa,0,"[u'liquefied natural gas', u' crude oil production and refining', u' ammonia', u' fertilizers', u' petrochemicals', u' steel reinforcing bars', u' cement', u' commercial ship repair']",2.2,3.5,1.5,36
-rs,0,"[u'complete range of mining and extractive industries producing coal', u' oil', u' gas', u' chemicals', u' and metals', u' all forms of machine building from rolling mills to high-performance aircraft and space vehicles', u' defense industries including radar', u' missile production', u'']",7.1,3.9,0.7,1064.0
-sa,0,"[u'crude oil production', u' petroleum refining', u' basic petrochemicals', u' ammonia', u' industrial gases', u' sodium hydroxide caustic soda', u' cement', u' fertilizer', u' plastics', u' metals', u' commercial ship repair', u' commercial aircraft repair', u' construction']",4.7,5.1,0.6,293
-su,0,"[u'oil', u' cotton ginning', u' textiles', u' cement', u' edible oils', u' sugar', u' soap distilling', u' shoes', u' petroleum refining', u' pharmaceuticals', u' armaments', u' automobile/light truck assembly', u' milling']",8.4,2.2,2.5,12
-sy,0,"[u'petroleum', u' textiles', u' food processing', u' beverages', u' tobacco', u' phosphate rock mining', u' cement', u' oil seeds crushing', u' automobile assembly']",3.3,5.1,-2.4,21
-tu,0,"[u'textiles', u' food processing', u' automobiles', u' electronics', u' mining coal', u' chromate', u' copper', u' boron', u' steel', u' petroleum', u' construction', u' lumber', u' paper']",5.4,4.8,4.5,239
-ae,0,"[u'petroleum and petrochemicals', u' fishing', u' aluminum', u' cement', u' fertilizers', u' commercial ship repair', u' construction materials', u' handicrafts', u' textiles']",3.6,NA,0.6,103
-us,0,"[u'highly diversified', u' world leading', u' high-technology innovator', u' second-largest industrial output in the world', u' petroleum', u' steel', u' motor vehicles', u' aerospace', u' telecommunications', u' chemicals', u' electronics', u' food processing', u' consumer goods', u' lumber', u' mining']",17.1,4.9,2.1,4103.0
-ym,0,"[u'crude oil production and petroleum refining', u' small-scale production of cotton textiles', u' leather goods', u' food processing', u' handicrafts', u' aluminum products', u' cement', u' commercial ship repair', u' natural gas production']",5.6,4.6,-27,7.2
+Country,Military Expenditures,Health Expenditures,Education Expenditures,Industrial Growth,Electricity Production
+af,0,8.2,3.4,2.4,1
+ba,0,5,2.6,1.6,26
+cy,0,7.4,604,1.5,4.1
+eg,0,5.6,3.8,0.6,162
+ir,0,6.9,2.9,4.5,258
+iz,0,5.5,NA,7,64
+is,0,7.8,5.9,2.6,57
+jo,0,7.5,NA,1.8,17
+ku,0,3,0,1.6,61
+le,0,6.4,2.6,1.4,18
+ly,0,5,NA,-6.7,35
+mu,0,3.6,5,1.5,28
+pk,0,2.6,2.7,6.8,100
+qa,0,2.2,3.5,1.5,36
+rs,0,7.1,3.9,0.7,1064
+sa,0,4.7,5.1,0.6,293
+su,0,8.4,2.2,2.5,12
+sy,0,3.3,5.1,-2.4,21
+tu,0,5.4,4.8,4.5,239
+ae,0,3.6,NA,0.6,103
+us,0,17.1,4.9,2.1,4103
+ym,0,5.6,4.6,-27,7.2

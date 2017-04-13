@@ -3,6 +3,9 @@ import numpy as np
 import os
 from sklearn import preprocessing
 
+countries = ['af', 'ba', 'cy', 'eg', 'ir', 'iz', 'is', 'jo', 'ku', 'le', 'ly', 'mu',
+                'pk', 'qa', 'rs', 'sa', 'su', 'sy', 'tu', 'ae', 'us', 'ym']
+
 def input_output(selected_countries,selected_categories,weights):
     dataframes=[]
     i=0
@@ -15,6 +18,7 @@ def input_output(selected_countries,selected_categories,weights):
             weight_vector.append(weights[i])
         dataframes.append(dataframe)
         i+=1
+    #print(len(dataframes))
     truth_table=dataframes[0]
     for dataframe in dataframes[1:]:
         truth_table = truth_table.merge(dataframe,on='Country',how='outer')
@@ -26,6 +30,7 @@ def input_output(selected_countries,selected_categories,weights):
     np_scaled = min_max_scaler.fit_transform(truth_table)
     data = pd.DataFrame(np_scaled)
     #data = truth_table_temp
+
     scores=[]
     for i in range(0,len(data.index)):
         #print(list(data.iloc[i]))
@@ -33,9 +38,9 @@ def input_output(selected_countries,selected_categories,weights):
         score_vector=np.array(list(data.iloc[i]))*np.array(weight_vector)
         scores.append(sum(score_vector))
     data['scores'] = scores
+    data['Country'] = selected_countries
     data=data.sort(['scores'],ascending=0)
     return data
-
 
 list1=['af','ba','cy']
 list2=['economy','society','geography','demographics','infrastructure']

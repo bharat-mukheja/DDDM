@@ -22,9 +22,10 @@ def results(request):
     parameters = request.POST.getlist('parameter_list')
     # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
     #Write information for displaying of results. All the required data is in the form.
-    execfile('balanceofpower\scraper.py')
+    #execfile('balanceofpower\scraper2.py')
     df = input_output(countries,parameters,[1 for i in range(len(parameters))])
-    return render(request, 'results.html',table = df.to_html())
+    table = df.to_html()
+    return render(request, 'results.html',{'table':table})
 
 
 #Testing html form objects
