@@ -16,10 +16,9 @@ def latest(request):
     return render(request, 'latest.html')
 
 def results(request):
-    test2(request)
-    form = InfoForm(request.POST)
-    if form.is_valid():
-        pass  # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
+    countries = request.POST.getlist('country_list')
+    parameters = request.POST.getlist('parameter_list')
+    # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
     #Write information for displaying of results. All the required data is in the form.
     return render(request, 'results.html')
 
