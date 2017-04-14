@@ -39,6 +39,7 @@ def input_output(selected_countries,selected_categories,weights):
         scores.append(sum(score_vector))
     data['scores'] = scores
     data['Country'] = selected_countries
+
     data=data.sort(['scores'],ascending=0)
     return data
 
