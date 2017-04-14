@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from .forms import InfoForm
-import pandas as pd
-from .algo import input_output
+#import pandas as pd
+#from .algo import input_output
 
 from django.contrib.staticfiles import finders
 # Create your views here.
