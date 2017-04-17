@@ -27,32 +27,28 @@
     <!-- Theme CSS -->
     <link href="{% static 'css/agency.min.css'%}" rel="stylesheet">
 	 <link href="{% static 'css/agency.css'%}" rel="stylesheet">
-
+     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 
 </head>
 
 <body id="page-top" class="index">
 	<script type="text/javascript">
-   var rangeSlider = function(){
-  var slider = $('.range-slider'),
-      range = $('.range-slider__range'),
-      value = $('.range-slider__value');
+$(window).load(function (){
+   var applystyle = function(){
+    var my = document.getElementsByTagName("td");
+    for (i = 0; i < my.length; i++) { 
+     my[i].style.color = "red";
 
-  slider.each(function(){
+}
 
-    value.each(function(){
-      var value = $(this).prev().attr('value');
-      $(this).html(value);
-    });
-
-    range.on('input', function(){
-      $(this).next(value).html(this.value);
-    });
-  });
+   var tabl= document.getElementsByTagName("table");
+    tabl.setAttribute('class', 'table');
 };
 
-rangeSlider();
+applystyle();
+});
+
 </script>
 
     <!-- Navigation -->

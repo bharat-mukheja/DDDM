@@ -14,7 +14,7 @@ def input_output(selected_countries, selected_categories, weights):
     weight_vector = []
     for category in selected_categories:
         print(os.getcwd())
-        url = 'balanceofpower\\data\\'+category + '.csv'
+        url = 'balanceofpower/data/'+category + '.csv'
         dataframe = pd.read_csv(url, )
         ncols = len(dataframe.columns)
         for j in range(0, ncols - 1):
