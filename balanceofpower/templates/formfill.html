@@ -32,12 +32,13 @@
 
 <body id="page-top" class="index">
 	<script type="text/javascript">
-   var rangeSlider = function(){
-  var slider = $('.range-slider'),
+ $(document).ready(function (){
+	var rangeSlider = function(){
+    var slider = $('.range-slider'),
       range = $('.range-slider__range'),
       value = $('.range-slider__value');
     
-  slider.each(function(){
+    slider.each(function(){
 
     value.each(function(){
       var value = $(this).prev().attr('value');
@@ -51,12 +52,13 @@
 };
 
 rangeSlider();
-
 function formsubmit(){
 
 
    return true;
 }
+
+	});
 
 </script>
 
