@@ -36,6 +36,12 @@ a:active,
 a.active {
   color: #fec503;
 }
+.dataframe > th{
+ color: white;  
+padding: 10px;
+}
+
+
 h1,
 h2,
 h3,
