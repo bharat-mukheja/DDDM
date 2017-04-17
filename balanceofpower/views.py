@@ -24,7 +24,7 @@ def results(request):
     #Write information for displaying of results. All the required data is in the form.
     #execfile('balanceofpower\scraper2.py')
     df = input_output(countries,parameters,[1 for i in range(len(parameters))])
-    table = df.to_html()
+    table = df.to_html(index = False, classes = 'table')
     return render(request, 'results.html',{'table':table})
 
 

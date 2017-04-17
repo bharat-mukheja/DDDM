@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# In[12]:
-
 def clean(token):
     token = re.sub('[(,;%$)]', '', token)
     return token
@@ -26,19 +24,18 @@ demw = csv.writer(demf)
 socw = csv.writer(socf)
 infw = csv.writer(inff)
 ecow.writerow(['Country Code', 'Exports', 'Imports', 'GDP', 'GDP Per Capita',
-              'Oil Production', 'Refined Petroleum Production'])
-geow.writerow(['Country Code', 'Area', 'Water Area', 'Natural Resources',
-              'Natural Hazards', 'Agriculture'])
-demw.writerow(['Country Code', 'Population', 'Ethnic Groups', 'Dependency Ratio',
-              'Unemployment', 'Literacy', 'Poverty', 'Population Growth'])
-socw.writerow(['Country Code', 'Net Migration', 'Urban Population', 'Obesity', 
+               'Oil Production', 'Refined Petroleum Production'])
+geow.writerow(['Country Code', 'Area', 'Water Area'])
+demw.writerow(['Country Code', 'Population', 'Dependency Ratio',
+               'Unemployment', 'Literacy', 'Poverty', 'Population Growth'])
+socw.writerow(['Country Code', 'Net Migration', 'Urban Population', 'Obesity',
                'Life Expectancy', 'Fertility', 'Internet', 'Infant Mortality'])
-infw.writerow(['Country Code', 'Military Expenditures', 'Industries',
-              'Health Expenditures', 'Education Expenditures',
-              'Industrial Growth', 'Electricity Production'])
+infw.writerow(['Country Code', 'Military Expenditures',
+               'Health Expenditures', 'Education Expenditures',
+               'Industrial Growth', 'Electricity Production'])
 
-countries = ['af', 'ba', 'cy', 'eg', 'ir', 'iz', 'is', 'jo', 'ku', 'le', 'ly', 'mu', 
-                'pk', 'qa', 'rs', 'sa', 'su', 'sy', 'tu', 'ae', 'us', 'ym']
+countries = ['af', 'ba', 'cy', 'eg', 'ir', 'iz', 'is', 'jo', 'ku', 'le', 'ly', 'mu',
+             'pk', 'qa', 'rs', 'sa', 'su', 'sy', 'tu', 'ae', 'us', 'ym']
 for country in countries:
     url = 'https://www.cia.gov//library/publications//the-world-factbook//geos/print_'
     url += country
@@ -46,13 +43,13 @@ for country in countries:
     page = requests.get(url).content
     soup = BeautifulSoup(page, 'html.parser')
     categories = soup.find_all(class_='category')
-    
+
     area = 0
     area_wat = 0
     resources = []
     hazards = []
     ethnic_grps = []
-    pop = 0 
+    pop = 0
     religions = []
     age_014 = 0
     age_1524 = 0
@@ -102,9 +99,9 @@ for country in countries:
     co2 = 0
     internet = 0
     mil_exp = 0
-    
+
     i = 0
-    try: 
+    try:
         while i < 500:
             cur = categories[i]
             cat = categories[i].get_text()
@@ -113,19 +110,19 @@ for country in countries:
                 abc = cur.get_text().split()
                 labc = len(abc)
                 if (cat == 'Religions:'):
-                    for l in range(0,labc - 1):
+                    for l in range(0, labc - 1):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+1])
+                        t2 = clean(abc[l + 1])
                         if t1 == 'Muslim':
                             religions.append(t1 + ' ' + t2)
                         elif t1 == 'Shia':
                             religions.append(t1 + ' ' + t2)
                         elif t1 == 'Sunni':
-                            religions.append(t1 + ' ' + t2)            
+                            religions.append(t1 + ' ' + t2)
                 elif (cat == 'Age structure:'):
-                    for l in range(0,labc - 3):
+                    for l in range(0, labc - 3):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+2])
+                        t2 = clean(abc[l + 2])
                         if t1 == '0-14':
                             age_014 = t2
                         elif t1 == '15-24':
@@ -135,11 +132,11 @@ for country in countries:
                         elif t1 == '55-64':
                             age_5564 = t2
                         elif t1 == '65':
-                            age_65p = clean(abc[l+4])
+                            age_65p = clean(abc[l + 4])
                 elif (cat == 'Dependency ratios:'):
-                    for l in range(0,labc - 3):
+                    for l in range(0, labc - 3):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+3])
+                        t2 = clean(abc[l + 3])
                         if t1 == 'total' and dep_rat_total == 0:
                             dep_rat_total = t2
                         elif t1 == 'youth' and dep_rat_youth == 0:
@@ -149,9 +146,9 @@ for country in countries:
                         elif t1 == 'potential' and dep_rat_potsup == 0:
                             dep_rat_potsup = t2
                 elif (cat == 'Median age:'):
-                    for l in range(0,labc - 1):
+                    for l in range(0, labc - 1):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+1])
+                        t2 = clean(abc[l + 1])
                         if t1 == 'total:':
                             med_age = t2
                 elif (cat == 'Population growth rate:'):
@@ -171,14 +168,14 @@ for country in countries:
                     if t1 != 'country':
                         net_mig = t1
                 elif (cat == 'Urbanization:'):
-                    for l in range(0,labc - 3):
+                    for l in range(0, labc - 3):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+2])
+                        t2 = clean(abc[l + 2])
                         if t1 == 'urban':
-                            t2 = clean(abc[l+2])
+                            t2 = clean(abc[l + 2])
                             urban_pop = t2
                         elif t2 == 'urbanization:':
-                            t2 = clean(abc[l+3])
+                            t2 = clean(abc[l + 3])
                             urban_rate = t2
                 elif (cat == 'Maternal mortality rate:'):
                     t1 = clean(abc[0])
@@ -235,13 +232,13 @@ for country in countries:
                         if t1 != 'country' and t1 != 'note:':
                             gdp_percap = t1
                 elif (cat == 'Agriculture - products:'):
-                    for l in range(0,labc):
+                    for l in range(0, labc):
                         t1 = clean(abc[l])
                         agriculture.append(t1)
                 elif (cat == 'Industries:'):
-                    abc = cur.get_text().replace(';',',').split(',')
+                    abc = cur.get_text().replace(';', ',').split(',')
                     labc = len(abc)
-                    for l in range(0,labc):
+                    for l in range(0, labc):
                         t1 = clean(abc[l])
                         industries.append(t1)
                 elif (cat == 'Industrial production growth rate:'):
@@ -341,12 +338,7 @@ for country in countries:
                         t1 = clean(abc[0])
                         t2 = clean(abc[1])
                         if t1 != 'country' and t1 != 'note':
-                            if t2 == 'billion':
-                                mil_exp = t1
-                            elif t2 == 'million':
-                                mil_exp = float(t1) / 1000.0
-                            elif t2 == 'trillion':
-                                mil_exp = float(t1) * 1000.0
+                            mil_exp = t1
                 elif (cat == 'Area:'):
                     t1 = clean(abc[0])
                     if t1 == 'total:':
@@ -356,21 +348,21 @@ for country in countries:
                         t2 = clean(abc[1])
                         area_wat = t2
                 elif (cat == 'Natural resources:'):
-                    abc = cur.get_text().replace(';',',').split(',')
+                    abc = cur.get_text().replace(';', ',').split(',')
                     labc = len(abc)
-                    for l in range(0,labc):
+                    for l in range(0, labc):
                         t1 = clean(abc[l])
                         resources.append(t1)
                 elif (cat == 'Natural hazards:'):
-                    abc = cur.get_text().replace(';',',').split(',')
+                    abc = cur.get_text().replace(';', ',').split(',')
                     labc = len(abc)
-                    for l in range(0,labc):
+                    for l in range(0, labc):
                         t1 = clean(abc[l])
                         hazards.append(t1)
                 elif (cat == 'Ethnic groups:'):
-                    abc = cur.get_text().replace(';',',').split(',')
+                    abc = cur.get_text().replace(';', ',').split(',')
                     labc = len(abc)
-                    for l in range(0,labc):
+                    for l in range(0, labc):
                         t1 = clean(abc[l])
                         if t1.split()[0][0].isupper():
                             ethnic_grps.append(t1)
@@ -379,9 +371,9 @@ for country in countries:
                         t1 = clean(abc[0])
                         pop = t1
                 elif (cat == 'Country name:'):
-                    for l in range(0,labc - 1):
+                    for l in range(0, labc - 1):
                         t1 = clean(abc[l])
-                        t2 = clean(abc[l+1])
+                        t2 = clean(abc[l + 1])
                         if t1 == 'local' and t2 == 'short':
                             pass
                 tmp = cur.find_next_sibling()
@@ -394,18 +386,12 @@ for country in countries:
     except Exception as e:
         pass
     ecow.writerow([country, exports, imports, gdp_exch, gdp_percap, oil_prod, ref_pet_prod])
-    geow.writerow([country, area, area_wat, resources, hazards, agriculture])
-    demw.writerow([country, pop, ethnic_grps, dep_rat_total, unemploy, lit, poverty, pop_growth])
+    geow.writerow([country, area, area_wat])
+    demw.writerow([country, pop, dep_rat_total, unemploy, lit, poverty, pop_growth])
     socw.writerow([country, net_mig, urban_pop, obesity, life_exp, fertility, internet, infant_mort])
-    infw.writerow([country, mil_exp, industries, health_exp, education, ind_growth, elec_prod])
+    infw.writerow([country, mil_exp, health_exp, education, ind_growth, elec_prod])
 ecof.close()
 geof.close()
 demf.close()
 socf.close()
 inff.close()
-
-
-# In[ ]:
-
-
-
