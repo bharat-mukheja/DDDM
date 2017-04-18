@@ -53,11 +53,26 @@
 
 rangeSlider();
 
+
 	});
 
 function formsubmit(){
 return true;
 }
+function chktoggle(source) {
+  checkboxes = document.getElementsByName('country_list');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+
+function facttoggle(source) {
+  checkboxes = document.getElementsByName('parameter_list');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+
 
 </script>
 
@@ -114,6 +129,7 @@ return true;
                    
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <form action="{% url 'results'%}" method="post" name="countryselect" id="contactForm" novalidate>
@@ -123,7 +139,23 @@ return true;
                             <div class="col-md-4">
 								<h5 style="color:blue; width:100%;margin-bottom:50px">Select list of countries to consider</h5>
                               <div class="checkbox leftcheck">
-									<label><input type="checkbox" name="country_list" value="all">Select All</label>
+
+     <script type="text/javascript">
+function chktoggle(source) {
+  checkboxes = document.getElementsByName('country_list');
+  for each(var checkbox in checkboxes)
+    checkbox.checked = source.checked;
+}
+function chktoggle(source) {
+  checkboxes = document.getElementsByName('country_list');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+</script>
+
+
+									<label><input type="checkbox" name="country_list" onClick="chktoggle(this)" value="select-all" id="select-all">Select All</input></label>
 								</div>
 				    <div class="checkbox leftcheck">
 									<label><input type="checkbox" name="country_list"  value="af">Afghanistan</label>
@@ -204,8 +236,14 @@ return true;
 							</div>
                             <div class="col-md-4 righthere">
                                 <h5 style="color:blue; width:100%; margin-bottom:50px">Select factors to consider</h5>
+ <div class="checkbox rightcheck">
+                                                                        <label><input type="checkbox" name="parameter_list"  onClick="facttoggle(this)" value="economy">Select All</label>
+                                        </div>
+
+
                                 <div class="checkbox rightcheck">
-									<label><input type="checkbox" name="parameter_list"  value="economy">Economy</label>
+
+ 									<label><input type="checkbox" name="parameter_list"  value="economy">Economy</label>
 					<div class="range-slider">
   <input class="range-slider__range" type="range" value="100" min="0" max="100" step="10">
   <span class="range-slider__value">0</span>
