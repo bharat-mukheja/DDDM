@@ -63,7 +63,7 @@ def input_output(selected_countries, selected_categories, weights):
     # final_data=pd.DataFrame(data,index=country)
 
     # final_data.iloc[0:len(ncols(data)-1),axis=0]=data.iloc[0:len(ncols(data)-1),axis=0]
-
+    data.to_csv('balanceofpower\\data\\all2.csv')
     return data
 
 
