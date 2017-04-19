@@ -14,8 +14,8 @@ def input_output(selected_countries, selected_categories, weights):
     weight_vector = []
     for category in selected_categories:
         print(os.getcwd())
-        url = 'balanceofpower/data/'+category + '.csv'
-        dataframe = pd.read_csv(url, )
+        url = 'balanceofpower\\data\\'+category + '.csv'
+        dataframe = pd.read_csv(url)
         ncols = len(dataframe.columns)
         for j in range(0, ncols - 1):
             weight_vector.append(weights[i])
@@ -28,7 +28,6 @@ def input_output(selected_countries, selected_categories, weights):
     truth_table = truth_table.loc[truth_table['Country'].isin(selected_countries)]
 
     final_columns = truth_table.columns.tolist()
-    print(final_columns)
 
     truth_table = truth_table.replace(np.NaN, 0)
     truth_table_temp = truth_table
@@ -64,11 +63,12 @@ def input_output(selected_countries, selected_categories, weights):
     # final_data=pd.DataFrame(data,index=country)
 
     # final_data.iloc[0:len(ncols(data)-1),axis=0]=data.iloc[0:len(ncols(data)-1),axis=0]
+
     return data
 
 
-list1 = ['qa', 'rs', 'pk']
-list2 = ['economy', 'society', 'geography', 'demographics', 'infrastructure']
-list3 = [1, 2, 3, 4, 5]
+#list1 = ['qa', 'rs', 'pk']
+#list2 = ['economy', 'society', 'geography', 'demographics', 'infrastructure']
+#list3 = [1, 2, 3, 4, 5]
 
-print(input_output(list1, list2, list3))
+#print(input_output(list1, list2, list3))
