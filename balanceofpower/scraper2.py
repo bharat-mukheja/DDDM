@@ -31,6 +31,7 @@ demw.writerow(['Country', 'Population', 'Dependency Ratio',
 socw.writerow(['Country', 'Net Migration', 'Urban Population', 'Obesity',
                'Life Expectancy', 'Fertility', 'Internet', 'Infant Mortality'])
 infw.writerow(['Country', 'Military Expenditures',
+
                'Health Expenditures', 'Education Expenditures',
                'Industrial Growth', 'Electricity Production'])
 

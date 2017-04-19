@@ -22,14 +22,12 @@ def input_output(selected_countries, selected_categories, weights):
         dataframes.append(dataframe)
         i += 1
     # print(len(dataframes))
-    #print(dataframes)
     truth_table = dataframes[0]
     for dataframe in dataframes[1:]:
         truth_table = truth_table.merge(dataframe, on='Country', how='outer')
     truth_table = truth_table.loc[truth_table['Country'].isin(selected_countries)]
 
     final_columns = truth_table.columns.tolist()
-    #print(final_columns)
 
     truth_table = truth_table.replace(np.NaN, 0)
     truth_table_temp = truth_table
@@ -65,7 +63,6 @@ def input_output(selected_countries, selected_categories, weights):
     # final_data=pd.DataFrame(data,index=country)
 
     # final_data.iloc[0:len(ncols(data)-1),axis=0]=data.iloc[0:len(ncols(data)-1),axis=0]
-    #print(data)
     return data
 
 
