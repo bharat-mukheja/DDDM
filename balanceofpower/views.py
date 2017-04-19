@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from .forms import InfoForm
 import pandas as pd
 from .algo import input_output
+import time
 
 from django.contrib.staticfiles import finders
 # Create your views here.
@@ -20,10 +21,14 @@ def latest(request):
 def results(request):
     countries = request.POST.getlist('country_list')
     parameters = request.POST.getlist('parameter_list')
+    #print(countries)
+    #print(parameters)
     # Write code for processing the form information. The form information should be passed to appropriate functions for processing and finally call results function for display
     #Write information for displaying of results. All the required data is in the form.
-    execfile('balanceofpower/scraper2.py')
+    #execfile('balanceofpower/scraper2.py')
+    time.sleep(5)
     df = input_output(countries,parameters,[1 for i in range(len(parameters))])
+    #df.to_csv('balanceofpower/data/all2.csv')
     table = df.to_html(index = False, classes = 'table')
     return render(request, 'results.html',{'table':table})
 

@@ -13,24 +13,24 @@ import requests
 import re
 import csv
 j = 0
-ecof = open('data\\economy.csv', 'wb')
-geof = open('data\\geography.csv', 'wb')
-demf = open('data\\demographics.csv', 'wb')
-socf = open('data\\society.csv', 'wb')
-inff = open('data\\infrastructure.csv','wb')
+ecof = open('balanceofpower\\data\\economy.csv', 'wb')
+geof = open('balanceofpower\\data\\geography.csv', 'wb')
+demf = open('balanceofpower\\data\\demographics.csv', 'wb')
+socf = open('balanceofpower\\data\\society.csv', 'wb')
+inff = open('balanceofpower\\data\\infrastructure.csv','wb')
 ecow = csv.writer(ecof)
 geow = csv.writer(geof)
 demw = csv.writer(demf)
 socw = csv.writer(socf)
 infw = csv.writer(inff)
-ecow.writerow(['Country Code', 'Exports', 'Imports', 'GDP', 'GDP Per Capita',
+ecow.writerow(['Country', 'Exports', 'Imports', 'GDP', 'GDP Per Capita',
                'Oil Production', 'Refined Petroleum Production'])
-geow.writerow(['Country Code', 'Area', 'Water Area'])
-demw.writerow(['Country Code', 'Population', 'Dependency Ratio',
+geow.writerow(['Country', 'Area', 'Water Area'])
+demw.writerow(['Country', 'Population', 'Dependency Ratio',
                'Unemployment', 'Literacy', 'Poverty', 'Population Growth'])
-socw.writerow(['Country Code', 'Net Migration', 'Urban Population', 'Obesity',
+socw.writerow(['Country', 'Net Migration', 'Urban Population', 'Obesity',
                'Life Expectancy', 'Fertility', 'Internet', 'Infant Mortality'])
-infw.writerow(['Country Code', 'Military Expenditures',
+infw.writerow(['Country', 'Military Expenditures',
                'Health Expenditures', 'Education Expenditures',
                'Industrial Growth', 'Electricity Production'])
 

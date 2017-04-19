@@ -14,7 +14,7 @@ def input_output(selected_countries, selected_categories, weights):
     weight_vector = []
     for category in selected_categories:
         print(os.getcwd())
-        url = 'balanceofpower/data/'+category + '.csv'
+        url = 'balanceofpower\\data\\'+category + '.csv'
         dataframe = pd.read_csv(url, )
         ncols = len(dataframe.columns)
         for j in range(0, ncols - 1):
@@ -22,6 +22,7 @@ def input_output(selected_countries, selected_categories, weights):
         dataframes.append(dataframe)
         i += 1
     # print(len(dataframes))
+    #print(dataframes)
     truth_table = dataframes[0]
     for dataframe in dataframes[1:]:
         truth_table = truth_table.merge(dataframe, on='Country', how='outer')
@@ -64,6 +65,7 @@ def input_output(selected_countries, selected_categories, weights):
     # final_data=pd.DataFrame(data,index=country)
 
     # final_data.iloc[0:len(ncols(data)-1),axis=0]=data.iloc[0:len(ncols(data)-1),axis=0]
+    #print(data)
     return data
 
 
