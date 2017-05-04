@@ -9,6 +9,8 @@ def input_output(selected_countries, selected_categories, weights):
                  'ku': 'Kuwait', 'le': 'Lebanon', 'ly': 'Libya', 'mu': 'Oman',
                  'pk': 'Pakistan', 'qa': 'Qatar', 'rs': 'Russia', 'sa': 'Saudi Arabia', 'su': 'Sudan', 'sy': 'Syria', 'tu': 'Turkmenistan', 'ae': 'UAE',
                  'us': 'USA', 'ym': 'Yemen'}
+    positives = ['Exports','GDP','GDP Per Capita','Oil Production','Refined Petroleum Production','Urban Population','Life Expectancy','Fertility','Internet','Area','Water Area','Population','Literacy','Military Expenditures','Health Expenditures','Education Expenditures','Industrial Growth','Electricity Production']
+    negatives = ['Imports','Net Migration','Obesity','Infant Mortality','Dependency Ratio','Unemployment','Poverty','Population Growth']
     dataframes = []
     i = 0
     weight_vector = []
@@ -39,6 +41,13 @@ def input_output(selected_countries, selected_categories, weights):
     np_scaled = min_max_scaler.fit_transform(truth_table)
     data = pd.DataFrame(np_scaled)
     # data = truth_table_temp
+    print(list(data.columns))
+    print(final_columns)
+    for col in data.columns:
+        print(final_columns[col+1])
+        if final_columns[col+1] in negatives:
+            print("--->"+final_columns[col+1])
+            data[col] *= -1
 
     for i in range(0, len(data.index)):
         for j in range(0, len(weight_vector)):
@@ -59,11 +68,12 @@ def input_output(selected_countries, selected_categories, weights):
     data = data[cols]
     final_columns.append('Score')
     data.columns = final_columns
+
     data = data.sort(['Score'], ascending=0)
     # final_data=pd.DataFrame(data,index=country)
 
     # final_data.iloc[0:len(ncols(data)-1),axis=0]=data.iloc[0:len(ncols(data)-1),axis=0]
-
+    #data.to_csv('balanceofpower\\data\\all2.csv')
     return data
 
 
